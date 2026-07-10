@@ -1,0 +1,181 @@
+
+
+/*garante que a rolagem em todo o site seja feita suavemente*/
+
+html{
+    scroll-behavior: smooth;
+}
+
+body{
+    padding: 0;
+    margin: 0;
+    background-color: rgb(255, 255, 255);
+    font-family: "Overpass", sans-serif;
+    box-sizing: border-box;
+}
+
+/*Top*/
+
+.header{
+    background-color:rgb(34, 34, 34);
+    width: 100%;
+    position: sticky;
+    top: 0;
+    z-index: 1;
+}
+.organization{
+    justify-content: space-between;
+    display: flex;
+    width: 100%;
+    height: 5rem;
+    align-items: center;
+}
+.title{
+    display: flex;
+    padding-left: 4rem;
+}
+.title1,.title2{
+    font-weight: bolder;
+    color: #E3651D;
+    font-size: 1.6rem;
+    font-family: "Overpass", sans-serif;
+}
+.title2{
+    color: aliceblue;
+}
+.header-links{
+    display: flex;
+    list-style-type: none;
+    padding-right: 4rem;
+    gap: 1rem;
+    font-family: "Overpass", sans-serif;
+}
+a{
+    text-decoration: none;
+    color: none;
+}
+a:hover{
+    color: rgb(182, 182, 182);
+}
+.links{
+    font-weight: 140;
+    color: white;
+}
+.header-links{
+    gap: 2rem;
+}
+
+
+/*images-section*/
+
+
+.banner{
+
+
+    box-sizing: border-box;
+    width: 100%;
+    max-width: 100%;
+    height: 90vh;
+    display: flex;
+
+
+    background-size: cover;
+    background-position: center;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url(images/Captura\ de\ tela\ 2026-07-10\ 021040\ \(1\).png);
+    background-repeat: no-repeat;
+
+
+
+    justify-content: flex-end;
+    align-items: flex-end;
+    color: #ffff;
+    padding: 90px 5%;
+}
+
+.bannerbuttons{
+    display: flex;
+    flex-direction: column;
+}
+h1{
+    color: white;
+    font-size: 60px;
+    font-weight: 400;
+}
+.buttonbanner{
+    display: flex;
+    background-color: transparent;
+    border: 2px solid #ffff;
+    padding: 14px 32px 12px 32px;
+    color: white;
+    font-size: 20px;
+    transition: 0.5s ease;
+    justify-content: center;
+    align-items: center;
+}
+.buttonbanner:hover{
+    background-color: #E3651D;
+    border: 2px solid #E3651D;
+    color: black;
+    box-shadow: 10px 10px 5px 0px rgba(0, 0, 0, 0.3);
+}
+
+/*midpage*/
+
+
+
+/*About*/
+
+.abouttitle, .aboutdescription1, .aboutmore{
+    justify-content: center;
+    display: flex;
+}
+
+.aboutbox{
+    background-color: white;
+    height: 40rem;
+     width: 100%;
+}
+.abouttext{
+    justify-content: center;
+    padding-right: 150px;
+    padding-left: 150px;
+}
+.abouttitle{
+    padding-top: 5rem;
+    color: #939496;
+    font-size: 20px;
+    font-weight: 300;
+    margin-bottom: 5rem;
+}
+.aboutdescription1, .aboutdescription2{
+    color: #2b2b2b;
+}
+.aboutdescription1{
+    font-size: 48px;
+    font-weight: 400;
+    margin-bottom: 3rem;
+    text-decoration: underline 5px #E3651D;
+    transition: 2s ease;
+}
+.aboutdescription2{
+    font-size: 20px;
+    margin-bottom: 20px;;
+}
+.aboutmore{
+    justify-content: center;
+}
+.aboutbutton{
+    margin-top: 2rem;
+    font-size: 16px;
+    padding: 14px 32px 12px 32px;
+    background-color: transparent;
+    border: none;
+    border-bottom: 2px solid #E3651D;
+    margin-bottom: 80px;
+    transition: 0.6s ease;
+}
+
+.aboutbutton:hover{
+    background-color: #E3651D;
+    color: white;
+}
