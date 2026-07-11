@@ -83,7 +83,7 @@ a:hover{
     box-sizing: border-box;
     width: 100%;
     max-width: 100%;
-    height: 90vh;
+     height: clamp(300px, 88vh, 800px);
     display: flex;
 
     position: relative;
@@ -339,6 +339,15 @@ h1{
     animation: fadeIn 2s ease forwards;
     font-weight: 200; /*Aplica a animação de fadeIn atrasada*/
 }
+.h2midpage{
+    margin: 0;
+    margin-top: 1em;
+    padding: 0;
+    animation: fadeIn 4s ease forwards;
+    font-weight: 200;
+    color: #ffffff;
+    font-size: clamp(12px, 2.5vw, 30px);
+}
 
 @keyframes underlinemidpagetitle {
     0% {
@@ -361,26 +370,33 @@ h1{
     max-width: 1600px;
     z-index: 3;
     margin-top: 10rem;
+
+    /* Aplica a máscara de gradiente para criar o efeito de fade nas bordas */
+
+   -webkit-mask-image: linear-gradient(to right, transparent 0%, black 2%, black 98%, transparent 100%);
+  mask-image: linear-gradient(to right, transparent 0%, black 2%, black 98%, transparent 100%);
 }
 
 .track{
     display: flex;
     width: max-content;
     animation: spin 15s linear infinite;
-    gap: 1em;
+    gap: 2em;
 }
 
 .group{
     display: flex;
-    gap: 1em;
+    gap: 2em;
     flex-shrink: 0;
 }
 
 .card{
-    width: 350px;
-    height: 350px;
+    width: clamp(250px, 30vw, 500px); 
+    
+   /* mantém o objeto sempre quadrado*/
+    aspect-ratio: 1 / 1; 
 
-    background: #2222223f;
+    background: none;
     color: white;
 
     display: flex;
@@ -393,7 +409,40 @@ h1{
     border-radius: 24px;
 
     flex-shrink: 0;
+    box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.2);
 }
+.card-content1,.card-content2,.card-content3,.card-content4,.card-content5,.card-content6{
+    width: 100%;
+    height: 100%;
+     border-radius: 24px;
+     background-size: cover;
+    background-position: center;
+}
+
+
+
+
+.card-content1{
+    background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)),url("images/img1.png");
+}
+.card-content2{
+    background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)),url("images/img2.png");
+}
+.card-content3{
+    background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)),url("images/img3.png");
+}
+.card-content4{
+    background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)),url("images/img4.png");
+}
+.card-content5{
+    background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)),url("images/img5.png");
+}
+.card-content6{
+    background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)),url("images/img6.png");
+}
+
+
+
 
 @keyframes spin{
     from{
