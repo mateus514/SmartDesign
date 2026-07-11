@@ -8,7 +8,7 @@ html{
 
 .content{
     width: 100%;
-    overflow-x: hidden;
+    overflow: clip;
 }
 
 body{
@@ -203,8 +203,6 @@ h1{
     box-shadow: 10px 10px 5px 0px rgba(0, 0, 0, 0.3);
 }
 
-/*midpage*/
-
 
 
 /*About*/
@@ -223,7 +221,14 @@ h1{
     justify-content: center;
     padding-right: 11.4%;
     padding-left: 11.4%;
+    padding-bottom: 4%;
+    padding-top: 2%;
     text-align: center;
+      /*animation scroll*/
+    animation-name: fadeIn;
+    animation-fill-mode: both; /* Mantém o estado final da animação */
+    animation-timeline: view(); /* Define a linha do tempo da animação para ocorrer quando o elemento estiver visível na viewport */
+    animation-range: entry 40% entry 100%; /* Define o intervalo da animação para ocorrer quando o elemento estiver entre 10% e 40% visível na viewport */
 }
 .abouttitle{
     
@@ -240,13 +245,17 @@ h1{
     font-size: clamp(24px, 3.5vw, 3rem);
     font-weight: 400;
     margin-bottom: 3rem;
-    text-decoration: underline 5px #E3651D;
-    transition: 2s ease;
+    text-decoration: underline 4px solid #E3651D;
+
+    animation: fadeIn 4s ease forwards; /*Aplica a animação de fadeIn atrasada*/
+
 }
 .aboutdescription2{
     font-size: clamp(16px, 1.5vw, 20px);
     margin-bottom: 20px;
     text-align: clamp(left, 10vw, justify);
+
+    animation: fadeIn 5s ease forwards;
 }
 .aboutmore{
     justify-content: center;
@@ -260,9 +269,137 @@ h1{
     border-bottom: 2px solid #E3651D;
     margin-bottom: clamp(40px, 5vw, 80px);
     transition: 0.6s ease;
+
+    animation: fadeIn 6s ease forwards; /*Aplica a animação de fadeIn atrasada*/
 }
 
 .aboutbutton:hover{
     background-color: #E3651D;
     color: white;
+}
+
+
+
+@keyframes fadeIn {
+    from{
+        opacity: 0;
+        transform: translateY(8rem);
+    }
+    to{
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+
+
+/*midpage*/
+
+
+
+.midpage{
+    background-color: #E3651D;
+    width: 100%;
+    height: 120vh;
+    justify-content: center;
+    display: flex;
+    flex-direction: column;
+}
+.text{
+    justify-content: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.midpagetitle{
+    font-size: clamp(24px, 3.5vw, 3rem);
+    color: #ffffff;
+    margin-top: 5rem;
+    display: inline-block;
+    justify-content: center;
+
+    background-image: linear-gradient( #ffffff, #ffffff); /*Define a cor da linha*/
+    background-repeat: no-repeat;
+    background-size: 0% 5px;    /*Estado final 100% de largura*/
+    background-position: 0 100%; /*Posiciona a linha na parte inferior do texto*/
+    
+    animation-name: fadeIn, underlinemidpagetitle;
+    animation-duration: 9s, 7s;
+    animation-fill-mode: both, forwards;
+    animation-timing-function: ease, ease;
+
+    animation-delay: 0s, 0s; 
+
+    animation-timeline: view(), auto; /* fadeIn usa o scroll (view), underline usa tempo (auto) */
+    animation-range: entry 40% entry 100%, normal; 
+}
+.h1midpage{
+    margin: 0;
+    padding: 0;
+    animation: fadeIn 2s ease forwards;
+    font-weight: 200; /*Aplica a animação de fadeIn atrasada*/
+}
+
+@keyframes underlinemidpagetitle {
+    0% {
+        background-size: 0% 5px; /*Estado inicial 0% de largura*/
+        color: #ffffff; 
+    }
+    100% {
+        background-size: 100% 5px; /*Estado final 100% de largura*/
+        color: #ffffff; /*Define a cor do texto*/
+    }
+}
+
+.carousel{
+    margin: 0 auto;
+    padding: 20px 0;
+    max-width: 700px;
+    overflow: hidden;
+    border-radius: 15px;
+    width: 100%;
+    max-width: 1600px;
+    z-index: 3;
+    margin-top: 10rem;
+}
+
+.track{
+    display: flex;
+    width: max-content;
+    animation: spin 15s linear infinite;
+    gap: 1em;
+}
+
+.group{
+    display: flex;
+    gap: 1em;
+    flex-shrink: 0;
+}
+
+.card{
+    width: 350px;
+    height: 350px;
+
+    background: #2222223f;
+    color: white;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    font-size: 3rem;
+    font-weight: bold;
+
+    border-radius: 24px;
+
+    flex-shrink: 0;
+}
+
+@keyframes spin{
+    from{
+        transform: translateX(0);
+    }
+    to{
+        transform: translateX(calc(-50% - .5em));
+    }
 }
