@@ -15,7 +15,7 @@ body{
     width: 100%;
     padding: 0;
     margin: 0;
-    background-color: rgb(255, 255, 255);
+    background-color: #E3651D;
     font-family: "Overpass", sans-serif;
     box-sizing: border-box;
 }
@@ -59,6 +59,12 @@ body{
     padding-left: 5.1%;
     gap: clamp(10px, 1.5vw, 32px);
     font-family: "Overpass", sans-serif;
+
+    /*removendo aqueles blocos azuls de quando vc clica no link*/
+
+    text-decoration: none;
+    color: inherit;
+    -webkit-tap-highlight-color: transparent;
 }
 a{
     text-decoration: none;
@@ -195,6 +201,13 @@ h1{
     transition: 0.5s ease;
     justify-content: center;
     align-items: center;
+
+
+    /*tirando o azul feio do botao banner*/
+
+    text-decoration: none;
+    color: inherit;
+    -webkit-tap-highlight-color: transparent;
 }
 .buttonbanner:hover{
     background-color: #E3651D;
@@ -214,7 +227,7 @@ h1{
 
 .aboutbox{
     background-color: white;
-    height: auto;
+    height: 105vh;
      width: 100%;
 }
 .abouttext{
@@ -261,7 +274,7 @@ h1{
     justify-content: center;
 }
 .aboutbutton{
-    margin-top: 2rem;
+    margin-top: 5rem;
     font-size: clamp(14px, 1.5vw, 16px);
     padding: 14px 32px 12px 32px;
     background-color: transparent;
@@ -346,7 +359,7 @@ h1{
     animation: fadeIn 4s ease forwards;
     font-weight: 200;
     color: #ffffff;
-    font-size: clamp(12px, 2.5vw, 30px);
+    font-size: clamp(22px, 2.5vw, 30px);
 }
 
 @keyframes underlinemidpagetitle {
@@ -368,7 +381,7 @@ h1{
     border-radius: 15px;
     width: 100%;
     max-width: 1600px;
-    z-index: 3;
+    z-index: 0;
     margin-top: 10rem;
 
     /* Aplica a máscara de gradiente para criar o efeito de fade nas bordas */
@@ -441,6 +454,140 @@ h1{
     background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)),url("images/img6.png");
 }
 
+
+
+/*final contact*/
+
+
+
+
+.contact{
+    background: linear-gradient(to top, #1a1a1a, #E3651D );
+    height: 100vh;
+    width: 100%;
+}
+.contactus{
+    font-weight: 200;
+    margin-top: 5rem;
+    font-size: clamp(1.30rem, 5vw, 3.75rem);
+    animation: fadeIn 7s ease forwards;
+    
+}
+.groupcontact{
+    display: flex;
+    gap: clamp(1.5em, 5vw, 8em); 
+    height: 100%;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+    animation: fadeIn 2s ease forwards;
+}
+.cardcontact1,.cardcontact2, .cardcontact3{
+    display: flex;
+    align-items: center;
+    width: 300px;
+    border-radius: 20px;
+    margin-bottom: 10rem;
+    background-image: linear-gradient(to right, #93949659, #93949633);
+     aspect-ratio: 1 / 1;
+     transition: box-shadow 0.5s ease; 
+
+
+     /*removendo aquele bloco azul quando clica no link*/
+
+    text-decoration: none;
+    color: inherit;
+    -webkit-tap-highlight-color: transparent
+
+}
+.cardcontact2{
+    animation: fadeIn 4s ease forwards;
+}
+.cardcontact3{
+    animation: fadeIn 6s ease forwards;
+}
+.cardcontact1:hover,.cardcontact2:hover, .cardcontact3:hover{
+    box-shadow: 10px 10px 5px 0px rgba(0, 0, 0, 0.3);
+
+}
+.boxcontact,.boxcontact2{
+    height: 40px;
+    width: 40px;
+}
+.boxcontact3{
+    height: 35px;
+    width: 35px;
+}
+.text1contact,.text2contact,.text3contact{
+    color: #ffffff;
+}
+.textdescriptioncontact1, .textdescriptioncontact2, .textdescriptioncontact3{
+    margin-left: 3rem;
+    color: #ffffff;
+}
+.description2contact{
+    max-width: 80%;
+}
+
+.linkcontact{
+
+    /* o link ocupa todo o espaço disponível com display block*/
+    display: block;
+    width: 100%;
+    height: 100%;
+    text-decoration: none;
+    color: inherit;
+}
+
+
+
+
+
+@media (max-width: 475px){
+    .contact{
+        height: auto;
+    }
+    .groupcontact{
+        flex-direction: column;
+        gap: 1rem;
+        justify-content: flex-start;
+        margin-top: 90px;
+    }
+    .cardcontact1,.cardcontact2, .cardcontact3{
+        width: 100%;
+        height: 190px;
+        margin-bottom: 30px;
+    }
+    .boxcontact,.boxcontact2{
+        height: 25px;
+        width: 25px;
+    }
+    .description2contact{
+        margin-bottom: 40px;
+    }
+
+    .boxcontact{
+        margin-top: 55px;
+    }
+    .boxcontact2{
+        margin-top: 45px;
+    }
+    .boxcontact3{
+        margin-top: 25px;
+        height: 20px;
+        width: 20px;
+    }
+    .textdescriptioncontact1, .textdescriptioncontact2, .textdescriptioncontact3{
+
+        font-size: 15px;
+        width: 70%;
+    }
+
+    .textanddescription1{
+        margin-bottom: 60px;
+    }
+
+}
 
 
 
