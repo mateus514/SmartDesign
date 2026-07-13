@@ -25,9 +25,9 @@ body{
 .header{
     background-color:rgb(34, 34, 34);
     width: 100%;
-    position: sticky;
+    position: fixed;
     top: 0;
-    z-index: 1;
+    z-index: 1000;
 }
 .organization{
     justify-content: space-between;
@@ -76,7 +76,7 @@ a:hover{
 .links{
     font-weight: 140;
     color: white;
-    font-size: clamp(15px, 1.2vw, 16px);
+    font-size: clamp(18px, 1.2vw, 16px);
 }
 
 
@@ -89,7 +89,7 @@ a:hover{
     box-sizing: border-box;
     width: 100%;
     max-width: 100%;
-     height: clamp(300px, 88vh, 800px);
+    min-height: 100dvh;
     display: flex;
 
     position: relative;
@@ -184,20 +184,22 @@ a:hover{
     text-align: clamp(center, 10vw, left);
     max-width: 90%;
 }
-h1{
+
+.bannerh1{
     color: white;
     font-weight: 400;
     font-size: clamp(30px, 4.5vw, 4rem);
     margin-bottom: clamp(15px, 2vw, 30px);
     word-wrap: break-word;
 }
+
 .buttonbanner{
     display: flex;
     background-color: transparent;
     border: 2px solid #ffff;
     padding: clamp(10px, 1vh, 14px) clamp(20px, 2.5vw, 32px);
     color: white;
-    font-size: clamp(16px, 1.5vw, 20px);
+    font-size: clamp(22px, 1.5vw, 25px);
     transition: 0.5s ease;
     justify-content: center;
     align-items: center;
@@ -351,6 +353,7 @@ h1{
     padding: 0;
     animation: fadeIn 2s ease forwards;
     font-weight: 200; /*Aplica a animação de fadeIn atrasada*/
+    font-size: clamp(32px, 5vw, 57.6px);
 }
 .h2midpage{
     margin: 0;
@@ -471,6 +474,7 @@ h1{
     margin-top: 5rem;
     font-size: clamp(1.30rem, 5vw, 3.75rem);
     animation: fadeIn 7s ease forwards;
+    color: #ffffff;
     
 }
 .groupcontact{
@@ -544,6 +548,28 @@ h1{
 
 
 @media (max-width: 475px){
+
+    .content{
+        font-weight: 500;
+    }
+    .bannerh1{
+        font-size: 40px;
+    }
+
+
+    .title{
+        margin-top: 1rem;
+    }
+    .aboutdescription2{
+        font-size: 18px;
+    }
+
+
+    .header-links{
+        width: 100%;
+        justify-content: center;
+        gap: 30px;
+    }
     .contact{
         height: auto;
     }
