@@ -313,7 +313,7 @@ a:hover{
 
 
 .midpage{
-    background-color: #E3651D;
+    background-color: #e3651d;
     width: 100%;
     height: 120vh;
     justify-content: center;
@@ -469,6 +469,7 @@ a:hover{
     justify-content: flex-end;
     height: 100vh;
     width: 100%;
+    padding-bottom: 10%;
 
 
     background-size: cover;
@@ -477,41 +478,53 @@ a:hover{
     
 }
 
+
 .scene1{
-    background-image: url("images/scene1.png");
+    background-image: url("images/scene11.png");
 }
 
-.scene2{
-   
-}
 
 
 .imagedescriptiontextcontent{
     display: flex;
     flex-direction: column;
-    gap: 10rem;
+    gap: clamp(2rem, 6vw, 10rem);
     width: 100%;
     height: 100%;
     color: #ffffff;
     justify-content: end;
     align-items: end;
-    margin-right: 4%;
-    margin-bottom: 15%;
+    padding-right: 4%;
+    padding-bottom: 15%;
     
     
     
 }
 
-.titledescription{
+.imagedescriptiontextcontent2{
     display: flex;
-    width: 40%;
+    flex-direction: column;
+    gap: clamp(2rem, 6vw, 10rem);
+    width: 100%;
     height: 100%;
-    margin-left: 6%;
-    margin-top: 2%;
+    color: #ffffff;
+    justify-content: flex-start;
+    align-items: flex-start;
+    padding-right: 4%;
+    padding-bottom: 15%;
+}
+
+.titledescription, .titledescription2{
+    display: flex;
+    max-width: 500px;
+    width: min(90%, 500px);
+    height: 100%;
+    padding-left: 6%;
+    padding-top: 2%;
 
 }
-.title1description{
-    font-size: 45px;
+.title1description, .title3description{
+    font-size: clamp(24px, 4vw, 42px);
     line-height: 1.1;
     color: #ffffff;
     
@@ -524,15 +537,70 @@ a:hover{
 
 
 }
-.title2description{
-    font-size: 28px;
+.title2description, .title2description2{
+    font-size: clamp(20px, 3vw, 28px);
     font-weight: 300;
-    margin-bottom: 0.5rem;
+    padding-bottom: 0.5rem;
 }
-.descriptionimage{
-  font-size: 20px;
+.descriptionimage, .descriptionimage2{
+  font-size: clamp(16px, 2vw, 20px);
   font-weight: 300;
 
+}
+
+
+
+/*imagedescription2*/
+
+
+
+
+.imagedescription2{
+     display: flex;
+    height: 100vh;
+
+    position: relative;
+    min-height: 100vh;
+    overflow: hidden;
+}
+.imagedescription22{
+    width: 100%;
+    height: 55%;
+
+}
+
+.title3description{
+    margin: 0;
+    padding-top: 2%;
+}
+.sectiondescription2{
+    padding-top: 2%;
+}
+
+.scene2{
+    position: absolute;
+    height: 100%;
+    
+    right: 0;
+    top: 0;
+
+    object-fit: contain;
+    object-position: right center;
+
+    width: clamp(500px, 80vw, 1300px);
+    z-index: -1;
+}
+
+
+
+.sectiondescription2{
+    display: flex;
+    flex-direction: column;
+    max-width: 380px;
+    text-align: left;
+    color: #ffffff;
+    padding-left: 7%;
+    
 }
 
 
@@ -691,6 +759,28 @@ a:hover{
         margin-bottom: 60px;
     }
 
+
+
+
+
+    /* imagedescription*/
+
+    .scene2{
+
+        width: 530px;
+        top: -19vw;
+        right: 4.2%;
+
+    
+    }
+    .sectiondescription2{
+        padding-top: 10%;
+    }
+    .imagedescription22{
+    width: 100%;
+    height: 60%;
+
+}
 }
 
 
