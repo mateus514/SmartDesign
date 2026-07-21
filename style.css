@@ -461,7 +461,9 @@ a:hover{
 /*imagedescription*/
 
 
-
+.imagedescription11{
+    display: contents;
+}
 
 .imagedescription{
     display: flex;
@@ -471,16 +473,26 @@ a:hover{
     width: 100%;
     padding-bottom: 10%;
 
-
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
+    position: relative;
+    overflow: hidden;
+    padding-top: 5%;
     
 }
 
 
 .scene1{
-    background-image: url("images/scene11.png");
+    position: absolute;
+    height: 100%;
+    
+    left: 5%;
+    top: 14%;
+
+    object-fit: contain;
+    object-position: left center;
+
+    width: clamp(200px, 80vw, 530px);
+    z-index: -1;
+   
 }
 
 
@@ -491,11 +503,11 @@ a:hover{
     gap: clamp(2rem, 6vw, 10rem);
     width: 100%;
     height: 100%;
+
     color: #ffffff;
     justify-content: end;
     align-items: end;
     padding-right: 4%;
-    padding-bottom: 15%;
     
     
     
@@ -511,7 +523,6 @@ a:hover{
     justify-content: flex-start;
     align-items: flex-start;
     padding-right: 4%;
-    padding-bottom: 15%;
 }
 
 .titledescription, .titledescription2{
@@ -527,6 +538,9 @@ a:hover{
     font-size: clamp(24px, 4vw, 42px);
     line-height: 1.1;
     color: #ffffff;
+    margin: 0;
+    height: 0;
+   
     
 }
 .sectiondescription{
@@ -545,8 +559,8 @@ a:hover{
 .descriptionimage, .descriptionimage2{
   font-size: clamp(16px, 2vw, 20px);
   font-weight: 300;
-
 }
+
 
 
 
@@ -572,6 +586,7 @@ a:hover{
 .title3description{
     margin: 0;
     padding-top: 2%;
+    height: 0;
 }
 .sectiondescription2{
     padding-top: 2%;
@@ -581,13 +596,13 @@ a:hover{
     position: absolute;
     height: 100%;
     
-    right: 0;
+    right: 5%;
     top: 0;
 
     object-fit: contain;
     object-position: right center;
 
-    width: clamp(500px, 80vw, 1300px);
+    width: clamp(200px, 60vw, 1300px);
     z-index: -1;
 }
 
@@ -765,11 +780,17 @@ a:hover{
 
     /* imagedescription*/
 
-    .scene2{
 
-        width: 500px;
+    .scene1{
         top: -19vw;
-        right: 7.2%;
+        left: 10%;
+    }
+
+
+    .scene2{
+       
+        top: -19vw;
+        right: 20%;
 
     
     }
