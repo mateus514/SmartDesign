@@ -461,9 +461,7 @@ a:hover{
 /*imagedescription*/
 
 
-.imagedescription11{
-    display: contents;
-}
+
 
 .imagedescription{
     display: flex;
@@ -485,13 +483,14 @@ a:hover{
     height: 100%;
     
     left: 5%;
-    top: 14%;
+    top: 16%;
 
     object-fit: contain;
     object-position: left center;
 
-    width: clamp(200px, 80vw, 530px);
+    width: clamp(200px, 80vw, 590px);
     z-index: -1;
+    animation: fadeIn 4s ease forwards;
    
 }
 
@@ -523,6 +522,7 @@ a:hover{
     justify-content: flex-start;
     align-items: flex-start;
     padding-right: 4%;
+    animation: fadeIn 7s ease forwards; 
 }
 
 .titledescription, .titledescription2{
@@ -532,6 +532,7 @@ a:hover{
     height: 100%;
     padding-left: 6%;
     padding-top: 2%;
+    animation: fadeIn 5s ease forwards; 
 
 }
 .title1description, .title3description{
@@ -555,10 +556,12 @@ a:hover{
     font-size: clamp(20px, 3vw, 28px);
     font-weight: 300;
     padding-bottom: 0.5rem;
+    animation: fadeIn 6s ease forwards; 
 }
 .descriptionimage, .descriptionimage2{
   font-size: clamp(16px, 2vw, 20px);
   font-weight: 300;
+  animation: fadeIn 8s ease forwards; 
 }
 
 
@@ -604,6 +607,7 @@ a:hover{
 
     width: clamp(200px, 60vw, 1300px);
     z-index: -1;
+     animation: fadeIn 4s ease forwards;
 }
 
 
@@ -778,13 +782,56 @@ a:hover{
 
 
 
-    /* imagedescription*/
+    /* imagedescription 1 e 2*/
 
 
     .scene1{
-        top: -19vw;
-        left: 10%;
+        order: 2;
+        position: relative;
+        top: 0;
+        left: 0;
+        height: auto;
+        width: 80%;
+        max-width: 350px;
+        margin: 9rem auto;
+        margin-bottom: 0;
+        
+        z-index: 1;
+    
+        
     }
+    .imagedescription{
+        flex-direction: column;
+        height: auto;
+        min-height: 100vh;
+        align-items: flex-start;
+        justify-content: flex-start;
+        padding-top: 8%;
+        padding-bottom: 8%;
+    }
+    .titledescription{
+        order: 1;
+        height: auto;
+        width: 100%;
+        max-width: 91%;
+        padding-left: 7%;
+        padding-top: 0;
+        }
+        .imagedescriptiontextcontent{
+            order: 3;
+            width: 100%;
+            align-items: flex-start;
+            justify-content: flex-start;
+            padding-right: 0;
+            padding-left: 0;
+        }
+        .sectiondescription{
+            text-align: left;
+            max-width: 340px;
+            width: 100%;
+            padding-left: 7%;
+            padding-top: 10%;
+        }
 
 
     .scene2{
@@ -795,7 +842,8 @@ a:hover{
     
     }
     .sectiondescription2{
-        padding-top: 10%;
+        padding-top: 12%;
+        max-width: 340px;
     }
     .imagedescription22{
     width: 100%;
