@@ -710,7 +710,50 @@ a:hover{
 
 
 
+@media(min-width: 887px) and (max-width: 1070px){
+    
+    .scene1{
+        order: 2;
+        max-width: 55%;
+    }
+    .descriptionimage, .descriptionimage2{
+        font-size: 20px;
+        max-width: 300px;
+        margin-bottom: 2.2rem;
+    }
 
+    .scene2{
+        max-width: 47%;
+    }
+
+    .title3description{
+        margin-top: 1rem;
+    }
+    .sectiondescription2{
+        margin-top: 3rem;
+    }
+    
+}
+
+@media(min-width: 476px) and (max-width: 887px){
+
+    .scene2{
+    
+        height: auto;
+        top: 13vw;
+        max-width: 45%;
+    }
+    .scene1{
+        height: auto;
+        top: 16rem;
+         max-width: 55%;
+    }
+     .descriptionimage, .descriptionimage2{
+        font-size: 20px;
+        max-width: 300px;
+        margin-bottom: 2.2rem;
+    }
+}
 
 @media (max-width: 475px){
 
@@ -836,8 +879,10 @@ a:hover{
 
     .scene2{
        
+        max-width: 63%;
         top: -19vw;
         right: 20%;
+        width: 63%;
 
     
     }
