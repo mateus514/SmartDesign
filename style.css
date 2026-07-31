@@ -893,9 +893,22 @@ a:hover{
     .imagedescription22{
     width: 100%;
     height: 60%;
+    }
+}
 
+ .footer{
+    padding: 10px;
+    display: flex;
+    justify-content: center;
+    background-color: #1a1a1a; 
 }
+.namefooter{
+    color: #ffffff;
+    font-size: 12px; 
+    font-weight: 100;
 }
+
+
 
 
 
